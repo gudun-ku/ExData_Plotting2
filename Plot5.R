@@ -27,7 +27,7 @@ NEI_Balt_total.mv <- aggregate(NEI_Balt.mv[c("Emissions")],
 
 head(NEI_Balt_total.mv)
 
-## 5. Plotting the data, using stats_smooth to show the trends better.
+## 5. Plotting the data, using stats_smooth to show the trend better.
 library(ggplot2)
 
 qplot(year, Emissions, data=NEI_Balt_total.mv,  geom="line") + 
