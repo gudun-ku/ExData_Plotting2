@@ -39,8 +39,9 @@ qplot(year,
       color = type, 
       geom= "line"
       ) + 
+  theme_bw() +
   ggtitle("Emissions in Baltimore County by Source Type") + 
-  xlab("Year") + ylab("PM2.5 Emissions, ton")                     
+  xlab("Year") + ylab(" " ~ PM[2.5] ~ " Emissions, tons")                     
 
 
 dev.copy(png,"Plot3.png", width = 800, height = 600)

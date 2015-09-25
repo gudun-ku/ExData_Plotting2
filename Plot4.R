@@ -43,8 +43,9 @@ qplot(year, Emissions, data=NEI_Coal.types, color=type, geom="line") +
     geom_line(aes(size="total", shape = NA))+
     stat_smooth(method="lm", se=FALSE, lty = 5) +
     ggtitle(expression("Coal Combustion across the U.S. Emissions by Source Type and Year"))  + 
+    theme_bw() +
     xlab("Year") +
-    ylab(expression("Total c" ~ PM[2.5] ~ "Emissions (millions of tons)"))
+    ylab(expression("Total " ~ PM[2.5] ~ "Emissions (millions of tons)"))
 
 dev.copy(png,"Plot4.png", width = 800, height = 600)
 dev.off()

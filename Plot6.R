@@ -43,9 +43,10 @@ library(ggplot2)
 
 qplot(year, Emissions, data=NEI_total.mv, color=city, geom="line") + 
   stat_smooth(method="lm", se=FALSE, lty = 8) +
+  theme_bw() +
   ggtitle(expression(atop("City Motor-Vehicle Emission Comparison", 
-                          atop(italic("Baltimore, MD and Los Angeles, from 1999 to 2008"))))) +   xlab("Year") +
-  ylab(expression("Total c" ~ PM[2.5] ~ "Emissions (tons)"))
+          atop(italic("Baltimore, MD and Los Angeles, from 1999 to 2008"))))) +   xlab("Year") +
+  ylab(expression("Total " ~ PM[2.5] ~ "Emissions (tons)"))
 
 
 dev.copy(png,"Plot6.png", width = 800, height = 600)

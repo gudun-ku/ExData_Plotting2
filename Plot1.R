@@ -23,7 +23,7 @@ NEI_TOTAL <- NEI_TOTAL/divider
 barplot(NEI_TOTAL, 
         main = "Total amount of Emissions across the U.S. by Year",
         xlab="",
-        ylab="Emissions amount, millions of tons", 
+        ylab="" ~ PM[2.5] ~ " Emissions amount, millions of tons", 
         col = "steelblue",
         space = 0.1, 
         sub = "Total emissions across the U.S from PM2.5 have decreased during the period since 1999 to 2008")

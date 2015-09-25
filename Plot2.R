@@ -25,9 +25,9 @@ NEI_Balt_total <-tapply(NEI_Balt$Emissions, INDEX=NEI_Balt$year, sum)
 plot(names(NEI_Balt_total),
      NEI_Balt_total,
      type = "o",
-     main = "Total PM2.5 Emissions in Baltimore County",
+     main = "Total " ~ PM[2.5] ~ " Emissions in Baltimore County",
      xlab = "",
-     ylab = "PM2.5 Emissions",
+     ylab = "" ~ PM[2.5] ~ " Emissions",
      pch = 18, col = "steelblue",
      lwd = 2,
      sub = "Total emission level in Baltimore county have decreased in range from 1999 to 2008")
@@ -37,7 +37,7 @@ lmodel <- lm(NEI_Balt_total ~ as.integer(names(NEI_Balt_total)))
 abline(lmodel,col = "darkred", lwd = 2, lty = 8)
 
 ## add legend to plot
-legend(2005,3325, 
+legend(2006,3300, 
        c("Emission","Trend"), 
        lty=c(1,5),
        lwd=c(2,2),

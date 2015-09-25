@@ -33,6 +33,7 @@ library(ggplot2)
 qplot(year, Emissions, data=NEI_Balt_total.mv,  geom="line") + 
   stat_smooth(method="lm", se=FALSE, lty = 5, col = "steelblue") +
   ggtitle(expression("Motor Vehicle Emissions by Year in Baltimore, MD"))  + 
+  theme_bw() +
   xlab("Year") +
   ylab(expression("Total " ~ PM[2.5] ~ " Emissions (tons)"))
 
